@@ -1,4 +1,7 @@
-// 获取滚动条的位置
+/**
+ * Get scroll position
+ * @returns number
+ */
 const getScrollTop = function () {
   var scrollPos;
   if (window.pageYOffset) {
@@ -11,7 +14,10 @@ const getScrollTop = function () {
   return scrollPos;
 };
 
-// 滚动条滚动到底部
+/**
+ * scroll is on bootom?
+ * @returns boolean
+ */
 const scrollBottom = function () {
   var bottom;
   //变量scrollTop是滚动条滚动时，距离顶部的距离
@@ -40,7 +46,7 @@ const setMinHeight = function () {
   if (footHeight != null) {
     let minHeight = winHeight - footHeight + "px";
     return minHeight;
-  }else{
+  } else {
     let minHeight = winHeight + "px";
     return minHeight;
   }
